@@ -1,5 +1,8 @@
+import 'package:coffee_shop_mobile_app/screens/dashboard_page.dart';
 import 'package:coffee_shop_mobile_app/utils/app_colors.dart';
+import 'package:coffee_shop_mobile_app/utils/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -22,7 +25,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       image: AssetImage('assets/images/welcome_page_bg.png'),
                       fit: BoxFit.cover)),*/
             child: Image.asset(
-              'assets/images/welcome_page_bg.png',
+              AppIcons.welcomePageBg,
               width: double.infinity,
               fit: BoxFit.fitWidth,
             )),
@@ -79,7 +82,9 @@ class _WelcomePageState extends State<WelcomePage> {
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(vertical: 24),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(DashboardPage());
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
