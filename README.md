@@ -1,16 +1,19 @@
 # coffee_shop_mobile_app
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Design inspired by:
+https://www.figma.com/file/Ao2zw0qAQY1UbjPqpLTttu/Coffee-Shop-Mobile-App-Design-(Community)?type=design&mode=design
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ragulsarma/online-coffee-shop-UI/assets/76203518/211cb4d5-f66d-46e3-b1f6-e3bd81faabf1" alt="Screenshot 1" style="width: 40%; margin-right: 10px;" />
+  <img src="https://github.com/ragulsarma/online-coffee-shop-UI/assets/76203518/cbe0bd5d-06f6-46bd-9505-12bac938fbef" alt="Screenshot 2" style="width: 40%; margin-left: 10px;" />
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ragulsarma/online-coffee-shop-UI/assets/76203518/198d1d3d-f062-4b89-b2dc-23b2831f3402" alt="Screenshot 3" style="width: 40%; margin-right: 10px;" />
+  <img src="https://github.com/ragulsarma/online-coffee-shop-UI/assets/76203518/630d0a6e-9909-45dc-9b78-ee05b72d0cbc" alt="Screenshot 4" style="width: 40%; margin-left: 10px;" />
+</div>
