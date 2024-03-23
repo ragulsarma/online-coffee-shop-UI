@@ -141,6 +141,7 @@ class _OrderPageState extends State<OrderPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 15),
+                  margin: const EdgeInsets.only(bottom: 15),
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {

@@ -57,7 +57,7 @@ class ProductListItems extends StatelessWidget {
         crossAxisSpacing: 10.0,
         mainAxisSpacing: 10.0,
         childAspectRatio: MediaQuery.of(context).size.width /
-            (MediaQuery.of(context).size.height / 1.15),
+            (MediaQuery.of(context).size.height / 1.35),
         scrollDirection: Axis.vertical,
         physics: const NeverScrollableScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: 30),

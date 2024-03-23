@@ -245,6 +245,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
           ),
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 30),
+            margin: const EdgeInsets.only(bottom: 15),
             color: Colors.white,
             child: Row(
               children: [
