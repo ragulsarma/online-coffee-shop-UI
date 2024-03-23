@@ -1,6 +1,8 @@
+import 'package:coffee_shop_mobile_app/screens/single_product_view_page.dart';
 import 'package:coffee_shop_mobile_app/utils/app_colors.dart';
 import 'package:coffee_shop_mobile_app/utils/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProductItemsModel {
   ProductItemsModel({
@@ -63,93 +65,99 @@ class ProductListItems extends StatelessWidget {
         children: List.generate(
           listOfItems.length,
           (index) {
-            return Card(
-              color: Colors.white,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 132,
-                    alignment: Alignment.topLeft,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        image: DecorationImage(
-                            image: AssetImage(listOfItems[index].src),
-                            fit: BoxFit.fitWidth),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(12))),
-                    child: Row(
-                      children: [
-                        const Icon(
-                          Icons.star,
-                          size: 12,
-                          color: Colors.orange,
-                        ),
-                        Text(
-                          listOfItems[index].ratings,
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ],
+            return GestureDetector(
+              onTap: () {
+                Get.to(const SingleProductViewPage());
+              },
+              child: Card(
+                color: Colors.white,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 132,
+                      alignment: Alignment.topLeft,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 10),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                              image: AssetImage(listOfItems[index].src),
+                              fit: BoxFit.cover),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(12))),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            size: 12,
+                            color: Colors.orange,
+                          ),
+                          Text(
+                            listOfItems[index].ratings,
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Text(
-                      listOfItems[index].title,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600),
+                    const SizedBox(
+                      height: 8,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Text(
-                      listOfItems[index].desc,
-                      style: const TextStyle(color: Colors.grey, fontSize: 12),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Text(
+                        listOfItems[index].title,
+                        style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          '\$ ${listOfItems[index].price}',
-                          style: const TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8, vertical: 8),
-                            decoration: const BoxDecoration(
-                                color: AppColors.primaryColor,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: const Icon(
-                              Icons.add,
-                              color: Colors.white,
-                            )),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Text(
+                        listOfItems[index].desc,
+                        style:
+                            const TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                ],
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            '\$ ${listOfItems[index].price}',
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 8, vertical: 8),
+                              decoration: const BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              )),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                  ],
+                ),
               ),
             );
           },
