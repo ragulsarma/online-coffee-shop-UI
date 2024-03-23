@@ -10,6 +10,7 @@ Screenshots
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/ragulsarma/online-coffee-shop-UI/assets/76203518/211cb4d5-f66d-46e3-b1f6-e3bd81faabf1" alt="Screenshot 1" style="width: 40%; margin-right: 20px;" />
+  ---
   <img src="https://github.com/ragulsarma/online-coffee-shop-UI/assets/76203518/cbe0bd5d-06f6-46bd-9505-12bac938fbef" alt="Screenshot 2" style="width: 40%; margin-left: 20px;" />
 </div>
 
