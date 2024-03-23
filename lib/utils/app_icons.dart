@@ -11,6 +11,8 @@ class AppIcons {
   static const String product4Image = '$imagePath/product_4_image.png';
   static const String milkIconImage = '$imagePath/milk_image.png';
   static const String beanIconImage = '$imagePath/bean_image.png';
+  static const String profileDpImage = '$imagePath/profile_dp_image.png';
+  static const String bikeImage = '$imagePath/bike_image.png';
 
   static const String homeIcon = '$iconPath/home_icon.svg';
   static const String notificationIcon = '$iconPath/notification_icon.svg';

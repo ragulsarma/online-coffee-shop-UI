@@ -1,3 +1,4 @@
+import 'package:coffee_shop_mobile_app/screens/delivery_page.dart';
 import 'package:coffee_shop_mobile_app/utils/app_colors.dart';
 import 'package:coffee_shop_mobile_app/utils/app_icons.dart';
 import 'package:coffee_shop_mobile_app/widgets/order_page_widgets/address_widget.dart';
@@ -143,7 +144,7 @@ class _OrderPageState extends State<OrderPage> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Get.to(DashboardPage());
+                      Get.to(DeliveryPage());
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
