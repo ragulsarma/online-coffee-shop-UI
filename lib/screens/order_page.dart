@@ -1,5 +1,8 @@
 import 'package:coffee_shop_mobile_app/utils/app_colors.dart';
 import 'package:coffee_shop_mobile_app/utils/app_icons.dart';
+import 'package:coffee_shop_mobile_app/widgets/order_page_widgets/address_widget.dart';
+import 'package:coffee_shop_mobile_app/widgets/order_page_widgets/order_switch_button_widget.dart';
+import 'package:coffee_shop_mobile_app/widgets/order_page_widgets/payment_details_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -29,8 +32,47 @@ class _OrderPageState extends State<OrderPage> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 30.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  OrderSwitchButtonWidget(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Delivery Address',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  AddressWidget(),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15.0),
+              child: Divider(
+                color: Colors.grey.shade300,
+                thickness: 3,
+              ),
+            ),
+            const PaymentDetailsWidget(),
+            const SizedBox(
+              height: 100,
+            )
+          ],
         ),
       ),
       bottomNavigationBar: ClipRRect(
@@ -44,30 +86,57 @@ class _OrderPageState extends State<OrderPage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
+                Row(
                   children: [
-                    Text(
-                      'Price',
-                      style: TextStyle(
-                        color: AppColors.greyColor,
+                    SvgPicture.asset(AppIcons.moneyIcon),
+                    Container(
+                      height: 24,
+                      padding: const EdgeInsets.only(right: 14),
+                      margin: const EdgeInsets.only(left: 12),
+                      decoration: const BoxDecoration(
+                        color: Color(0XFFF2F2F2),
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              backgroundColor: AppColors.primaryColor,
+                            ),
+                            child: const Text(
+                              'Cash',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          const Text(
+                            '\$ 6.53',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      '\$ 4.53',
-                      style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600),
-                    ),
+                    const Spacer(),
+                    Container(
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.grey),
+                        child: const Icon(
+                          Icons.more_horiz_rounded,
+                          color: Colors.white,
+                        ))
                   ],
-                ),
-                const SizedBox(
-                  width: 42,
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 15),

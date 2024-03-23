@@ -19,4 +19,6 @@ class AppIcons {
   static const String searchIcon = '$iconPath/search_icon.svg';
   static const String settingsIcon = '$iconPath/setting_icon.svg';
   static const String heartIcon = '$iconPath/heart_icon.svg';
+  static const String discountIcon = '$iconPath/discount_icon.svg';
+  static const String moneyIcon = '$iconPath/money_icon.svg';
 }
